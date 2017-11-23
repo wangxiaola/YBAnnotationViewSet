@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "MapVC.h"
+#import "MapNoniusVC.h"
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -25,7 +26,7 @@
 
 #pragma mark *** UITableViewDataSource ***
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return 2;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 44;
@@ -37,21 +38,47 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"spaceCell"];
     }
     
-    if (indexPath.row == 0) {
-        cell.textLabel.text = @"四叉树算法：地图标注聚合展开";
+    switch (indexPath.row) {
+        case 0:
+        {
+            cell.textLabel.text = @"四叉树算法：地图标注聚合展开";
+        }
+            break;
+        case 1:
+        {
+            cell.textLabel.text = @"屏幕边沿指示游标";
+        }
+            break;
+            
+        default:
+            break;
     }
     
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 
 #pragma mark *** UITableViewDelegate ***
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    if (indexPath.row == 0) {
-        MapVC *vc = [MapVC new];
-        [self.navigationController pushViewController:vc animated:YES];
+    
+    switch (indexPath.row) {
+        case 0:
+        {
+            MapVC *vc = [MapVC new];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 1:
+        {
+            MapNoniusVC *vc = [MapNoniusVC new];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+            
+        default:
+            break;
     }
+
 }
 
 #pragma mark *** getter ***

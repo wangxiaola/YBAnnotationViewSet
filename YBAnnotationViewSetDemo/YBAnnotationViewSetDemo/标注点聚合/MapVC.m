@@ -29,9 +29,11 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = kColor_white;
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    
     isFirstLoad = YES;
     self.view = self.mapView;
-    
 }
 
 #pragma mark *** private ***
@@ -87,7 +89,7 @@
 #pragma mark *** getter ***
 - (MAMapView *)mapView {
     if (!_mapView) {
-        _mapView = [[MAMapView alloc] initWithFrame:CGRectMake(0, 44+kHeightOfStatusBar, SCREEN_WIDTH, SCREEN_HEIGHT-44-kHeightOfStatusBar)];
+        _mapView = [[MAMapView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-44-kHeightOfStatusBar)];
         _mapView.delegate = self;
         _mapView.zoomLevel = 12;
     }

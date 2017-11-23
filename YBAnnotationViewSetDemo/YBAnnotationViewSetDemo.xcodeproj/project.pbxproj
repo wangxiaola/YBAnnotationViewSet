@@ -19,6 +19,9 @@
 		2304E88B1FC315C800E0931C /* AnnotationQuadTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2304E88A1FC315C800E0931C /* AnnotationQuadTreeNode.m */; };
 		2304E88E1FC3172000E0931C /* AnnotationQuadTreeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2304E88D1FC3172000E0931C /* AnnotationQuadTreeManager.m */; };
 		232D7F241FC4024C00DC42D8 /* Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 232D7F231FC4024C00DC42D8 /* Tool.m */; };
+		235B40211FC665D800FFD4B1 /* MapNoniusVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 235B40201FC665D800FFD4B1 /* MapNoniusVC.m */; };
+		235B40251FC6675300FFD4B1 /* MapNoniusTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 235B40241FC6675300FFD4B1 /* MapNoniusTool.m */; };
+		235B40281FC66D9E00FFD4B1 /* header.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 235B40271FC66D9E00FFD4B1 /* header.jpg */; };
 		9650A40ABCF284469700F4D2 /* Pods_YBAnnotationViewSetDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC41920D259365C2C10A0495 /* Pods_YBAnnotationViewSetDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +50,11 @@
 		232D7F231FC4024C00DC42D8 /* Tool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tool.m; sourceTree = "<group>"; };
 		232D7F251FC40C0800DC42D8 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		232D7F271FC4125200DC42D8 /* ToolMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToolMacros.h; sourceTree = "<group>"; };
+		235B401F1FC665D800FFD4B1 /* MapNoniusVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapNoniusVC.h; sourceTree = "<group>"; };
+		235B40201FC665D800FFD4B1 /* MapNoniusVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapNoniusVC.m; sourceTree = "<group>"; };
+		235B40231FC6675300FFD4B1 /* MapNoniusTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapNoniusTool.h; sourceTree = "<group>"; };
+		235B40241FC6675300FFD4B1 /* MapNoniusTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapNoniusTool.m; sourceTree = "<group>"; };
+		235B40271FC66D9E00FFD4B1 /* header.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = header.jpg; sourceTree = "<group>"; };
 		25EFA3E772E0445B1BD5A056 /* Pods-YBAnnotationViewSetDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YBAnnotationViewSetDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-YBAnnotationViewSetDemo/Pods-YBAnnotationViewSetDemo.release.xcconfig"; sourceTree = "<group>"; };
 		4E89BA620EB7DCF2F5473AE1 /* Pods-YBAnnotationViewSetDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YBAnnotationViewSetDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YBAnnotationViewSetDemo/Pods-YBAnnotationViewSetDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		BC41920D259365C2C10A0495 /* Pods_YBAnnotationViewSetDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YBAnnotationViewSetDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,18 +102,10 @@
 		2304E8631FC305D700E0931C /* YBAnnotationViewSetDemo */ = {
 			isa = PBXGroup;
 			children = (
+				235B401E1FC6655C00FFD4B1 /* Other */,
 				232D7F261FC40F2300DC42D8 /* Tools */,
-				232D7F251FC40C0800DC42D8 /* PrefixHeader.pch */,
+				235B401D1FC6653300FFD4B1 /* 屏幕边沿指示游标 */,
 				2304E87D1FC3096500E0931C /* 标注点聚合 */,
-				2304E8641FC305D700E0931C /* AppDelegate.h */,
-				2304E8651FC305D700E0931C /* AppDelegate.m */,
-				2304E8671FC305D700E0931C /* ViewController.h */,
-				2304E8681FC305D700E0931C /* ViewController.m */,
-				2304E86A1FC305D700E0931C /* Main.storyboard */,
-				2304E86D1FC305D700E0931C /* Assets.xcassets */,
-				2304E86F1FC305D700E0931C /* LaunchScreen.storyboard */,
-				2304E8721FC305D700E0931C /* Info.plist */,
-				2304E8731FC305D700E0931C /* main.m */,
 			);
 			path = YBAnnotationViewSetDemo;
 			sourceTree = "<group>";
@@ -151,6 +151,43 @@
 				232D7F231FC4024C00DC42D8 /* Tool.m */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		235B401D1FC6653300FFD4B1 /* 屏幕边沿指示游标 */ = {
+			isa = PBXGroup;
+			children = (
+				235B40271FC66D9E00FFD4B1 /* header.jpg */,
+				235B40221FC6674100FFD4B1 /* MapNoniusTool */,
+				235B401F1FC665D800FFD4B1 /* MapNoniusVC.h */,
+				235B40201FC665D800FFD4B1 /* MapNoniusVC.m */,
+			);
+			path = "屏幕边沿指示游标";
+			sourceTree = "<group>";
+		};
+		235B401E1FC6655C00FFD4B1 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				2304E8641FC305D700E0931C /* AppDelegate.h */,
+				2304E8651FC305D700E0931C /* AppDelegate.m */,
+				2304E8671FC305D700E0931C /* ViewController.h */,
+				2304E8681FC305D700E0931C /* ViewController.m */,
+				2304E86A1FC305D700E0931C /* Main.storyboard */,
+				2304E86D1FC305D700E0931C /* Assets.xcassets */,
+				2304E86F1FC305D700E0931C /* LaunchScreen.storyboard */,
+				2304E8721FC305D700E0931C /* Info.plist */,
+				2304E8731FC305D700E0931C /* main.m */,
+				232D7F251FC40C0800DC42D8 /* PrefixHeader.pch */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+		235B40221FC6674100FFD4B1 /* MapNoniusTool */ = {
+			isa = PBXGroup;
+			children = (
+				235B40231FC6675300FFD4B1 /* MapNoniusTool.h */,
+				235B40241FC6675300FFD4B1 /* MapNoniusTool.m */,
+			);
+			path = MapNoniusTool;
 			sourceTree = "<group>";
 		};
 		632FA87151B0CDCBA68247A5 /* Frameworks */ = {
@@ -224,6 +261,7 @@
 			files = (
 				2304E8711FC305D700E0931C /* LaunchScreen.storyboard in Resources */,
 				2304E86E1FC305D700E0931C /* Assets.xcassets in Resources */,
+				235B40281FC66D9E00FFD4B1 /* header.jpg in Resources */,
 				2304E86C1FC305D700E0931C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,6 +330,8 @@
 				232D7F241FC4024C00DC42D8 /* Tool.m in Sources */,
 				2304E8661FC305D700E0931C /* AppDelegate.m in Sources */,
 				2304E88E1FC3172000E0931C /* AnnotationQuadTreeManager.m in Sources */,
+				235B40211FC665D800FFD4B1 /* MapNoniusVC.m in Sources */,
+				235B40251FC6675300FFD4B1 /* MapNoniusTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
